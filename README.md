@@ -9,8 +9,6 @@ This means that in addition to numerical data like the OS and browser version, t
 
 ```javascript
 console.log(clientinfo);
-
-
 ```
 
 Returns an array like this:
@@ -32,7 +30,6 @@ Returns an array like this:
 	retina: false
 
 }
-
 ```
 
 You can also access individual values like this:
@@ -42,7 +39,6 @@ console.log(clientinfo.browsername);
 console.log(clientinfo.devicetype);
 console.log(clientinfo.pixelratio);
 // etcetera.
-
 ```
 
 To do:
