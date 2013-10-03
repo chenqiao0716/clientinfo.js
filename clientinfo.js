@@ -8,7 +8,7 @@
 
 	var av = navigator.userAgent.toLowerCase();
 	
-	var clientinfo = function () { 
+	window.clientinfo = function () { 
 	
 		var browser = (function(){
 		
@@ -43,8 +43,8 @@
 		
 		var osv = function(){
 		
-			if(os == 'windows' && browser[0] == 'chrome') return /windows (.*?)\)/i.exec(av)[1]; // somehow firefox does get the correct os version (the regex works), but doesnt return the value here.
-			if(os == 'windows') return /windows (.*?)\;/i.exec(av)[1]; // somehow firefox does get the correct os version (the regex works), but doesnt return the value here.
+			if(os == 'windows' && browser[0] == 'chrome') return /windows (.*?)\)/i.exec(av)[1]; // Somehow chrome on windows uses a different syntax for navigator.userAgent
+			else if(os == 'windows') return /windows (.*?)\;/i.exec(av)[1]; 
 			else if(os == 'ios') return /os (.*?)like/i.exec(av)[1].replace(/_/g , ".");
 			else if(os == 'macos') return /mac (.*?)\)/i.exec(av)[1].replace(/_/g , ".");
 			else if(os == 'android') return /android (.*?);/i.exec(av)[1];
