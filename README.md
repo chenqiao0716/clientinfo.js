@@ -5,7 +5,7 @@ A tiny script that returns all kinds of relevant data about the client device.
 The goal is to add any type of information that can be useful when developing a client-centered website. 
 This means that in addition to numerical data like the OS and browser version, things like the part of the day and devicetype are also available.
 
-# Usage:
+## Usage:
 
 ```javascript
 console.log(clientinfo);
