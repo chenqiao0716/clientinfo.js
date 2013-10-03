@@ -94,9 +94,7 @@
 			else if (myDate.getHours() > 18) return 'evening';
 			
 		}();
-		
-		var java = navigator.javaEnabled();
-									
+											
 		var browserlang = navigator.language || navigator.userLanguage; 
 		
 		return { 
@@ -112,7 +110,6 @@
 			'pixelratio': pixelr,
 			'retina': retina,
 			'orientation': orie,
-			'java': java,
 			'daypart': daypart
 		 
 		}; 	
