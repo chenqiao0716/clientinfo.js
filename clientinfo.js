@@ -23,21 +23,21 @@
 		
 		var os = (function(){
 		
-			if (av.match(/(win)/)) return "windows";
-			else if (av.match(/(iphone|ipod|ipad)/)) return "ios";
-			else if (av.match(/(mac)/)) return "macos";
-			else if (av.match(/(android)/)) return "android";
-			else if (av.match(/(X11)/)) return "unix";
-			else if (av.match(/(linux)/)) return "linux";
-			else return "undetecable (not one of the big players)";
+			if (av.match(/(win)/)) return 'windows';
+			else if (av.match(/(iphone|ipod|ipad)/)) return 'ios';
+			else if (av.match(/(mac)/)) return 'macos';
+			else if (av.match(/(android)/)) return 'android';
+			else if (av.match(/(X11)/)) return 'unix';
+			else if (av.match(/(linux)/)) return 'linux';
+			else return 'undetecable (not one of the big players)';
 	
 		})();
 		
 		var devicetype = function(){
 			
-			if (av.match(/(mobile|phone)/)) return "mobile";
-			else if (av.match(/(tablet|touch)/)) return "tablet";
-			else return "desktop";
+			if (av.match(/(mobile|phone)/)) return 'mobile';
+			else if (av.match(/(tablet|touch)/)) return 'tablet';
+			else return 'desktop';
 	
 		}();
 		
