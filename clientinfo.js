@@ -97,6 +97,17 @@
 											
 		var browserlang = navigator.language || navigator.userLanguage; 
 		
+		// Detect speed of connection using navigator.connection, needs work as spec changes
+		var connection = function() {
+		
+			// copied from modernizr
+			// polyfill
+			var connection = navigator.connection || { type: 0 };
+			
+			return connection.type == 3 || connection.type == 4 || /^[23]g$/.test(connection.type) || 'unknown';
+		
+		}();		
+		
 		return { 
 		
 			'browsername': browser[0], 
@@ -110,7 +121,8 @@
 			'pixelratio': pixelr,
 			'retina': retina,
 			'orientation': orie,
-			'daypart': daypart
+			'daypart': daypart,
+			'connection': connection
 		 
 		}; 	
 		
